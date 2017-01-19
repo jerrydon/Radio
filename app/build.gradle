@@ -1,0 +1,79 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+//apply plugin: 'com.google.gms.google-services'
+
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven {
+        url "https://jitpack.io"
+    }
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+
+
+
+
+//        applicationId "com.frable.radio.radio"
+//        applicationId "com.frable.radio.radio_gradur"
+//        applicationId "com.frable.radio.radio_PNL"
+        applicationId "com.frable.radio.afro_beats"
+//        applicationId "com.frable.radio.radio_RAP_FR"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 2
+        versionName "1.1"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile('com.mopub:mopub-sdk:4.9.0@aar') {
+        transitive = true
+    }
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.github.iammert:RadioPlayerService:efe3b5420b'
+    compile 'com.google.android.gms:play-services:9.4.0'
+//    compile 'com.google.android.gms:play-services:8.4.0'
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.google.firebase:firebase-ads:9.4.0'
+    compile 'com.google.firebase:firebase-core:9.4.0'
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.4@aar') {
+        transitive = true;
+    }
+    compile 'com.squareup.picasso:picasso:2.3.2'
+    compile 'com.android.support:multidex:1.0.1'
+
+    compile 'com.jakewharton:butterknife:7.0.1'
+
+}

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.frable.radio.jul.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="10">
+
+                <ImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="3.7"
+                    android:src="@mipmap/ic_afro_beats_round" />
+
+                <ImageView
+                    android:id="@+id/imv_banner2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.6"
+                    android:padding="@dimen/dp_15"
+                    android:src="@mipmap/ic_afro_beats" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_weight="3.8"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:lines="1"
+                        android:text=" czxczxc"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/sp_17" />
+                    <TextView
+                        android:id="@+id/tv_artist"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:text="czxczxczxczxczxc "
+                        android:layout_weight="1"
+                        android:textColor="#7000"
+                        android:textSize="@dimen/sp_15" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_100"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imv_share_to_all_apps"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom|center"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/play_pause"
+                        android:padding="@dimen/dp_30"
+                        android:src="@mipmap/ic_share_to_all_apps" />
+
+                    <ImageView
+                        android:id="@+id/playButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom|center"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/play_pause"
+                        android:padding="@dimen/dp_20"
+                        android:src="@mipmap/ic_play_btn" />
+
+                    <ImageView
+                        android:id="@+id/imv_air_play"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom|center"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/play_pause"
+                        android:padding="@dimen/dp_22"
+                        android:src="@mipmap/ic_airplay" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="5"
+                        android:padding="@dimen/dp_7"
+                        android:src="@mipmap/ic_sound_down" />
+
+                    <SeekBar
+                        android:id="@+id/music_seek"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:max="15"
+                        android:progressDrawable="@drawable/seekbar_bg" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:padding="@dimen/dp_2"
+                        android:src="@mipmap/ic_sound_up" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom|center"
+            android:layout_weight="7"
+            android:animateLayoutChanges="true"
+            android:visibility="gone"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id"></com.google.android.gms.ads.AdView>
+    </LinearLayout>
+
+
+</FrameLayout>

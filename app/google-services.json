@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "944579235318",
+    "firebase_url": "https://admob-app-id-6702090807.firebaseio.com",
+    "project_id": "admob-app-id-6702090807",
+    "storage_bucket": "admob-app-id-6702090807.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:944579235318:android:5e9d025e70c52c7f",
+        "android_client_info": {
+          "package_name": "com.frable.radio.jul"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "944579235318-7fukgf5agbu6s66nfhujislfvtp0ho6n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCN_W2g76UwVBxHmpWDOAjrrMiX9-Q5a6E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
